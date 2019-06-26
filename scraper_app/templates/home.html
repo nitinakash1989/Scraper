@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-8">Scrapy Tool</legend>
+            </fieldset>
+			
+			<div class="row">
+				<div class="col-md-12">
+					<p>&nbsp;&nbsp;&nbsp; This tool is developed to scrape the data from <a href = "http://calistings.cushmanwakefield.com/desktop.aspx">Cushman.</a></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<ol>
+					  <li>This tool is developed in python using selenium(<a href= "https://www.mozilla.org/en-CA/firefox/new/">Firefox</a> Required) package to scrape the data </li>
+					  <li>The data is cleaned and all string values are converted in upper case.</li>
+					  <li>Once button(Download data) is clicked it will scrap, clean and download the data. </li>
+					  <li>Download Toronto office listing data. </li>
+					</ol>
+				</div>
+			  </div>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+            
+        </form>
+    </div>
+    
+{% endblock content %}
